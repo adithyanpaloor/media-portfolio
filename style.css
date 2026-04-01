@@ -113,6 +113,8 @@ header.sticky {
     flex-direction: column;
     cursor: pointer;
     gap: 6px;
+    padding: 10px;
+    touch-action: manipulation;
 }
 
 .menu-toggle span {
@@ -330,38 +332,6 @@ header.sticky {
     .hero-accent {
         height: 200px;
     }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 20px;
-    }
-
-    header.sticky {
-        padding: 15px 20px;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #080808;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.5s ease;
-    }
-
-    .nav-links.active {
-        max-height: 500px;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
 
     .about-content,
     .contact-container {
@@ -389,6 +359,19 @@ header.sticky {
     .timeline-item::after {
         left: 15px;
     }
+
+    .about-text h2 {
+        font-size: 2em;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .skill-card,
+    .project-card {
+        padding: 30px 20px;
+    }
 }
 
 nav ul li {
@@ -409,7 +392,7 @@ nav ul li a:hover {
 
 /* ===== ABOUT SECTION ===== */
 .about {
-    padding: 120px 100px;
+    padding: 80px 20px;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.5), rgba(10, 14, 39, 0.7));
     position: relative;
     overflow: hidden;
@@ -494,7 +477,7 @@ nav ul li a:hover {
 
 /* ===== SKILLS SECTION ===== */
 .skills {
-    padding: 120px 100px;
+    padding: 80px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -527,7 +510,7 @@ nav ul li a:hover {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
     position: relative;
     z-index: 1;
@@ -605,7 +588,7 @@ nav ul li a:hover {
 
 /* ===== PORTFOLIO SECTION ===== */
 .portfolio {
-    padding: 120px 100px;
+    padding: 80px 20px;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.5), rgba(10, 14, 39, 0.7));
     position: relative;
 }
@@ -652,7 +635,7 @@ nav ul li a:hover {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
 }
 
@@ -684,7 +667,7 @@ nav ul li a:hover {
 
 /* ===== PROJECTS SECTION ===== */
 .projects {
-    padding: 120px 100px;
+    padding: 80px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -703,7 +686,7 @@ nav ul li a:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
     position: relative;
     z-index: 1;
@@ -797,13 +780,13 @@ nav ul li a:hover {
 
 /* ===== VIDEOS SECTION ===== */
 .videos {
-    padding: 120px 100px;
+    padding: 80px 20px;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.5), rgba(10, 14, 39, 0.7));
 }
 
 .videos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
 }
 
@@ -849,7 +832,7 @@ nav ul li a:hover {
 
 /* ===== EXPERIENCE SECTION ===== */
 .experience {
-    padding: 120px 100px;
+    padding: 80px 20px;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.5), rgba(10, 14, 39, 0.7));
     position: relative;
 }
@@ -958,7 +941,7 @@ nav ul li a:hover {
 
 /* ===== CONTACT SECTION ===== */
 .contact {
-    padding: 120px 100px;
+    padding: 80px 20px;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.5), rgba(10, 14, 39, 0.7));
     position: relative;
     overflow: hidden;
@@ -1039,6 +1022,248 @@ nav ul li a:hover {
     margin-bottom: 25px;
     font-size: 1.1em;
     color: #aaa;
+}
+
+/* ===== SMALL PHONE MEDIA QUERY (480px and below) ===== */
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 0 15px;
+        height: 70vh;
+        margin-top: 60px;
+    }
+
+    .hero-title {
+        font-size: 1.8em;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    .about {
+        padding: 50px 15px;
+    }
+
+    .about-text h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        font-size: 0.95em;
+        margin-bottom: 25px;
+    }
+
+    .social-media {
+        gap: 20px;
+    }
+
+    .social-media a img {
+        width: 35px;
+    }
+
+    .skills {
+        padding: 50px 15px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+    }
+
+    .skills-grid {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 20px 15px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .skill-card i {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .skill-card h3 {
+        font-size: 1.2em;
+    }
+
+    .portfolio {
+        padding: 50px 15px;
+    }
+
+    .portfolio-grid {
+        gap: 15px;
+    }
+
+    .portfolio-item {
+        aspect-ratio: 1;
+    }
+
+    .projects {
+        padding: 50px 15px;
+    }
+
+    .projects-grid {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        animation: slideInLeft 0.8s ease-out backwards;
+    }
+
+    .project-card:nth-child(even) {
+        animation: slideInLeft 0.8s ease-out backwards;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content h3 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .videos {
+        padding: 50px 15px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .experience {
+        padding: 50px 15px;
+    }
+
+    .timeline::after {
+        left: 25px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 15px;
+        animation: slideInLeft 0.8s ease-out backwards !important;
+    }
+
+    .timeline-item::after {
+        left: 9px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content ul li {
+        font-size: 0.9em;
+    }
+
+    .contact {
+        padding: 50px 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .contact-form textarea {
+        height: 120px;
+    }
+
+    .contact-info h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .contact-info p {
+        font-size: 0.95em;
+        margin-bottom: 15px;
+    }
+
+    .filter-btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.95em;
+    }
+}
+
+/* ===== TABLET MEDIA QUERY (768px to 1199px) ===== */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .about,
+    .skills,
+    .portfolio,
+    .projects,
+    .videos,
+    .experience,
+    .contact {
+        padding: 100px 50px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .videos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* ===== LARGE SCREEN MEDIA QUERY (1200px and above) ===== */
+@media (min-width: 1200px) {
+    .about,
+    .skills,
+    .portfolio,
+    .projects,
+    .videos,
+    .experience,
+    .contact {
+        padding: 120px 100px;
+    }
+}
     transition: all 0.3s ease;
 }
 

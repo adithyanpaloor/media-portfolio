@@ -109,4 +109,12 @@ if (menuToggle) {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
+    // Close menu when a link is clicked
+    const navLinks_items = navLinks.querySelectorAll('a');
+    navLinks_items.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
 }
