@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <span class="logo-text">Adithyan</span>
+                <span class="logo-dot"></span>
+            </a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link-animated">Home</a></li>
+                <li><a href="#about" class="nav-link-animated">About</a></li>
+                <li><a href="#portfolio" class="nav-link-animated">Portfolio</a></li>
+                <li><a href="#experience" class="nav-link-animated">Experience</a></li>
+                <li><a href="#projects" class="nav-link-animated">Projects</a></li>
+                <li><a href="#contact" class="nav-link-animated">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="word" style="--delay: 0s">VISUAL</span>
+                        <span class="word" style="--delay: 0.1s">STORYTELLER</span>
+                    </h1>
+                    <p class="hero-subtitle">Photographer | Cinematographer | Editor</p>
+                    <a href="#portfolio" class="btn btn-primary">Explore Work</a>
+                </div>
+                <div class="hero-accent">
+                    <div class="accent-circle accent-1"></div>
+                    <div class="accent-circle accent-2"></div>
+                    <div class="accent-circle accent-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="images/dp.png" alt="Adithyan">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am a passionate photographer, cinematographer, and editor working across the full creative pipeline from pre-production to post-production. My work focuses on storytelling through visuals, capturing moments that transcend the ordinary.</p>
+                    <div class="social-media">
+                        <a href="#"><img src="images/indin (1).png" alt="Instagram"></a>
+                        <a href="#"><img src="images/indin (2).png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Editing</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Photography</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-film"></i>
+                    <h3>Cinematography</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Event Coverage</h3>
+                </div>
+               
+                <div class="skill-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Direction</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Sanskriti'26 Media Head</h3>
+                        <ul>
+                            <li>Led media planning and execution for major cultural events</li>
+                            <li>Directed photography and videography teams</li>
+                            <li>Created promotional campaigns for event engagement</li>
+                            <li>Managed social media content and growth</li>
+                            <li>Coordinated live event media coverage</li>
+                            <li>Produced highlight videos and reels</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>IEDC Media Head</h3>
+                        <ul>
+                            <li>Produced promotional videos for startup and tech events</li>
+                            <li>Captured media coverage for workshops and hackathons</li>
+                            <li>Managed social media presence</li>
+                            <li>Designed creative event promotions</li>
+                            <li>Handled video production and editing</li>
+                            <li>Boosted online visibility through digital content</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Nasa Space Media Head </h3>
+                        <ul>
+                            <li>Produced media content on space and science topics</li>
+                            <li>Captured and edited event coverage</li>
+                            <li>Created visuals for educational outreach</li>
+                            <li>Managed multimedia storytelling projects</li>
+                            <li>Designed promotional content for events</li>
+                            <li>Collaborated with technical teams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fashion">Fashion</button>
+                <button class="filter-btn" data-filter="automobile">Automobile</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="creative">Creative</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="fashion">
+                    <img src="images/fashion/1.jpeg" alt="Fashion Photography">
+                </div>
+                <div class="portfolio-item" data-category="fashion">
+                    <img src="images/fashion/4.jpeg" alt="Fashion Photography">
+                </div>
+                <div class="portfolio-item" data-category="fashion">
+                    <img src="images/fashion/3.jpeg" alt="Fashion Photography">
+                </div>
+                <div class="portfolio-item" data-category="automobile">
+                    <img src="images/auto1.jpg" alt="Automobile Photography">
+                </div>
+
+
+                <div class="portfolio-item" data-category="events">
+                    <img src="images/event/1.jpeg" alt="Event Coverage">
+                </div>
+                 <div class="portfolio-item" data-category="events">
+                    <img src="images/event/2.jpeg" alt="Event Coverage">
+                </div>
+                 <div class="portfolio-item" data-category="events">
+                    <img src="images/event/3.jpeg" alt="Event Coverage">
+                </div>
+                 <div class="portfolio-item" data-category="events">
+                    <img src="images/event/4.jpeg" alt="Event Coverage">
+                </div>
+                 <div class="portfolio-item" data-category="events">
+                    <img src="images/event/5.jpeg" alt="Event Coverage">
+                </div>
+                 <div class="portfolio-item" data-category="events">
+                    <img src="images/event/6.jpeg" alt="Event Coverage">
+                </div>
+
+
+                <div class="portfolio-item" data-category="creative">
+                    <img src="images/creative/1.jpeg" alt="Creative Shoot">
+                </div>
+                 <div class="portfolio-item" data-category="creative">
+                    <img src="images/creative/2.jpeg" alt="Creative Shoot">
+                </div>
+                 <div class="portfolio-item" data-category="creative">
+                    <img src="images/creative/3.jpeg" alt="Creative Shoot">
+                </div>
+                 <div class="portfolio-item" data-category="creative">
+                    <img src="images/creative/4.jpeg" alt="Creative Shoot">
+                </div>
+                 <div class="portfolio-item" data-category="creative">
+                    <img src="images/creative/5.jpeg" alt="Creative Shoot">
+                </div>
+                 <div class="portfolio-item" data-category="creative">
+                    <img src="images/creative/6.jpeg" alt="Creative Shoot">
+                </div>
+
+
+                <div class="portfolio-item" data-category="fashion">
+                    <img src="images/fashion/2.jpeg" alt="Fashion Photography">
+                </div>
+                <div class="portfolio-item" data-category="automobile">
+                    <img src="images/auto2.jpg" alt="Automobile Photography">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/projects/ana.jpeg" alt="Project 1">
+                    <div class="project-overlay">
+                        <img src="images/video-editor.png" alt="Play Video" class="play-overlay">
+                    </div>
+                    <div class="project-content">
+                        <h3>Project 1 — Anachronist</h3>
+                        <p>Directed a psychological short film about a college student experiencing unsettling shifts in reality within his hostel, where time and memory begin to blur.</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/projects/DIVONNAM.png" alt="Project 2">
+                    <div class="project-content">
+                        <h3>Project 2 — Divonnam</h3>
+                        <p>A musical promotional video created for Onnam in collaboration with MACE Film Society and MACE Fashion Club Divaat.</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/projects/shark.png" alt="Project 3">
+                    <div class="project-content">
+                        <h3>Project 3 — Shark Tank Promo</h3>
+                        <p>Directed and edited a promotional video for the Shark Tank idea-pitching competition conducted by IEDC..</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="videos" class="videos">
+            <h2 class="section-title">Videos & Podcasts</h2>
+            <div class="videos-grid">
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/C-ratZ8DeUQ?si=fUXz2mL42PITFOB_" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/C-ratZ8DeUQ?si=fUXz2mL42PITFOB_" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="play-button"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-phone"></i> +91 7356508925</p>
+                    <p><i class="fas fa-envelope"></i> adithyanpaloor97@gmail.com</p>
+                    <p><i class="fab fa-instagram"></i> @_adhi_zz</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="logo">
+                <span class="logo-text">Adithyan</span>
+                <span class="logo-dot"></span>
+            </a>
+            <div class="social-media">
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <p>&copy; 2026 Adithyan. All rights reserved.</p>
+        </div>
+        <a href="#home" class="scroll-to-top"><img src="images/arrow-up.png" alt="Scroll to top"></a>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+</html>
