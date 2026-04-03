@@ -65,7 +65,7 @@ sr.reveal('.hero-text', { delay: 200, origin: 'top' });
 sr.reveal('.about-img, .contact-info', { origin: 'left' });
 sr.reveal('.about-text, .contact-form', { origin: 'right' });
 sr.reveal('.section-title', { delay: 100, origin: 'top' });
-sr.reveal('.skills-grid, .projects-grid, .videos-grid', { delay: 200, origin: 'bottom', interval: 100 });
+sr.reveal('.skills-grid, .education-grid, .projects-grid, .videos-grid', { delay: 200, origin: 'bottom', interval: 100 });
 sr.reveal('.timeline-item', { origin: 'bottom', interval: 200 });
 sr.reveal('.portfolio-filter', { delay: 200, origin: 'top' });
 sr.reveal('.portfolio-item', { delay: 200, origin: 'bottom', interval: 100 });
