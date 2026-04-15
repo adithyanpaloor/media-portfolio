@@ -3,51 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Portfolio</title>
+    <title>Adithyan Paloor - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_modern.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo">
-                <span class="logo-text">Adithyan</span>
-                <span class="logo-dot"></span>
-            </a>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+    <header class="navbar">
+        <nav class="nav-container">
+            <a href="#home" class="nav-logo">adithyan</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link-animated">Home</a></li>
-                <li><a href="#about" class="nav-link-animated">About</a></li>
-                <li><a href="#education" class="nav-link-animated">Education</a></li>
-                <li><a href="#portfolio" class="nav-link-animated">Portfolio</a></li>
-                <li><a href="#experience" class="nav-link-animated">Experience</a></li>
-                <li><a href="#projects" class="nav-link-animated">Projects</a></li>
-                <li><a href="#contact" class="nav-link-animated">Contact</a></li>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section id="home" class="hero" onmousemove="parallax(event)">
+            <div id="interactive-bg"></div>
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="word" style="--delay: 0s">Adithyan</span>
-                        <span class="word" style="--delay: 0.1s">Paloor</span>
-                    </h1>
-                    <p class="hero-subtitle">Photographer | Cinematographer | Editor | Design</p>
-                    <a href="#portfolio" class="btn btn-primary">Explore Work</a>
-                </div>
-                <div class="hero-accent">
-                    <div class="accent-circle accent-1"></div>
-                    <div class="accent-circle accent-2"></div>
-                    <div class="accent-circle accent-3"></div>
-                </div>
+                <h1 class="hero-title" data-speed="2">Adithyan Paloor</h1>
+                <p class="hero-subtitle" data-speed="5">I am a <span class="auto-type"></span></p>
+                <p class="hero-description" data-speed="3">Creating compelling visual stories through photography, cinematography, and design</p>
+                <a href="#portfolio" class="btn btn-primary" data-speed="6">View My Work</a>
             </div>
         </section>
 
@@ -101,15 +90,20 @@
         <section id="education" class="education">
             <h2 class="section-title">Education</h2>
             <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                <div class="education-card elegant-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-meta">
+                            <span class="education-year">2022 — 2026</span>
+                            <span class="education-status">Expected</span>
+                        </div>
                     </div>
                     <div class="education-content">
                         <h3>BTech in Computer Science & Engineering</h3>
                         <p class="education-institution">Mar Athanasius College of Engineering (Data Science)</p>
-                        <p class="education-details">Kothamangalam, Kerala</p>
-                        <p class="education-year">Oct 2022 - May 2026 (Expected)</p>
+                        <p class="education-details"><i class="fas fa-map-marker-alt"></i> Kothamangalam, Kerala</p>
                     </div>
                 </div>
             </div>
@@ -238,9 +232,6 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <img src="images/projects/ana.jpeg" alt="Project 1">
-                    <div class="project-overlay">
-                        <img src="images/video-editor.png" alt="Play Video" class="play-overlay">
-                    </div>
                     <div class="project-content">
                         <h3>Project 1 — Anachronist</h3>
                         <p>Directed a psychological short film about a college student experiencing unsettling shifts in reality within his hostel, where time and memory begin to blur.</p>
@@ -267,7 +258,7 @@
         </section>
 
         <section id="videos" class="videos">
-            <h2 class="section-title">Videos & Podcasts</h2>
+            <h2 class="section-title">Videos</h2>
             <div class="videos-grid">
                 <div class="video-item">
                     <iframe src="https://www.youtube.com/embed/C-ratZ8DeUQ?si=fUXz2mL42PITFOB_" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

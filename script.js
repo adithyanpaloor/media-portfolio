@@ -1,21 +1,33 @@
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 0);
-});
+// ===== HAMBURGER MENU =====
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const navLink = document.querySelectorAll('.nav-link');
 
-// Portfolio filter
-const filterBtns = document.querySelectorAll('.filter-btn');
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    navLink.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+}
+
+// ===== PORTFOLIO FILTER =====
+const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filter = btn.dataset.filter;
-
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.getAttribute('data-filter');
         portfolioItems.forEach(item => {
-            if (filter === 'all' || item.dataset.category === filter) {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
                 item.style.display = 'block';
             } else {
                 item.style.display = 'none';
@@ -24,97 +36,64 @@ filterBtns.forEach(btn => {
     });
 });
 
-// Scroll to top button
-const scrollToTopBtn = document.querySelector('.scroll-to-top');
+// ===== SCROLL REVEAL =====
+if (typeof ScrollReveal !== 'undefined') {
+    ScrollReveal({
+        reset: false,
+        distance: '30px',
+        duration: 600,
+        delay: 100,
+        easing: 'ease-in-out'
+    });
+    ScrollReveal().reveal('.hero-content', { origin: 'bottom' });
+    ScrollReveal().reveal('.about-content', { origin: 'left' });
+    ScrollReveal().reveal('.skill-card', { interval: 100 });
+    ScrollReveal().reveal('.portfolio-item', { interval: 100 });
+    ScrollReveal().reveal('.timeline-content', { origin: 'left' });
+}
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopBtn.classList.add('show');
-    } else {
-        scrollToTopBtn.classList.remove('show');
-    }
-});
-
-// Contact form validation
-const contactForm = document.querySelector('.contact-form form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const name = contactForm.querySelector('input[name="name"]');
-    const email = contactForm.querySelector('input[name="email"]');
-    const message = contactForm.querySelector('textarea[name="message"]');
-
-    if (name.value && email.value && message.value) {
-        alert('Message sent successfully!');
-        contactForm.reset();
-    } else {
-        alert('Please fill in all fields.');
-    }
-});
-
-// Scroll Reveal
-const sr = ScrollReveal({
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
-    reset: true
-});
-
-sr.reveal('.hero-text', { delay: 200, origin: 'top' });
-sr.reveal('.about-img, .contact-info', { origin: 'left' });
-sr.reveal('.about-text, .contact-form', { origin: 'right' });
-sr.reveal('.section-title', { delay: 100, origin: 'top' });
-sr.reveal('.skills-grid, .education-grid, .projects-grid, .videos-grid', { delay: 200, origin: 'bottom', interval: 100 });
-sr.reveal('.timeline-item', { origin: 'bottom', interval: 200 });
-sr.reveal('.portfolio-filter', { delay: 200, origin: 'top' });
-sr.reveal('.portfolio-item', { delay: 200, origin: 'bottom', interval: 100 });
-sr.reveal('footer', { delay: 200, origin: 'bottom' });
-
-// Lightbox
-const portfolioGrid = document.querySelector('.portfolio-grid');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeLightbox = document.querySelector('.close-lightbox');
-
-if (portfolioGrid) {
-    portfolioGrid.addEventListener('click', (e) => {
-        if (e.target.tagName === 'IMG') {
-            lightbox.style.display = 'block';
-            lightboxImg.src = e.target.src;
+// ===== SMOOTH SCROLL NAVIGATION =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
-}
+});
 
-if(closeLightbox) {
-    closeLightbox.addEventListener('click', () => {
-        lightbox.style.display = 'none';
+// ===== FORM SUBMISSION =====
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! I will get back to you soon.');
+        this.reset();
     });
 }
 
-if(lightbox) {
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.style.display = 'none';
-        }
-    });
-}
-
-
-// Mobile menu
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked
-    const navLinks_items = navLinks.querySelectorAll('a');
-    navLinks_items.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+// ===== TYPEWRITER EFFECT =====
+document.addEventListener("DOMContentLoaded", function() {
+    if (document.querySelector('.auto-type')) {
+        new Typed('.auto-type', {
+            strings: ['Photographer', 'Cinematographer', 'Video Editor', 'Designer'],
+            typeSpeed: 80,
+            backSpeed: 50,
+            loop: true,
+            backDelay: 1500,
+            showCursor: true,
+            cursorChar: '|'
         });
+    }
+});
+
+// ===== HERO PARALLAX EFFECT =====
+function parallax(e) {
+    document.querySelectorAll('.hero-content > *').forEach(layer => {
+        const speed = layer.getAttribute('data-speed');
+        const x = (window.innerWidth - e.pageX * speed) / 100;
+        const y = (window.innerHeight - e.pageY * speed) / 100;
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
     });
 }
